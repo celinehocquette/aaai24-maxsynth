@@ -1,0 +1,46 @@
+verbgroup(A,B):- derivationallyrelatedform(C,B),derivationallyrelatedform(A,C).
+verbgroup(A,B):- hypernym(A,C),hypernym(B,C).
+verbgroup(A,B):- hypernym(C,A),hypernym(B,C).
+verbgroup(A,B):- hypernym(C,B),hypernym(A,C).
+verbgroup(A,B):- derivationallyrelatedform(C,A),derivationallyrelatedform(B,C).
+verbgroup(A,B):- derivationallyrelatedform(A,C),derivationallyrelatedform(B,C).
+verbgroup(A,B):- synsetdomaintopicof(B,C),synsetdomaintopicof(A,C).
+verbgroup(A,B):- derivationallyrelatedform(A,C),similarto(B,D).
+verbgroup(A,B):- derivationallyrelatedform(E,A),hypernym(D,B),membermeronym(E,C).
+verbgroup(A,B):- memberofdomainusage(E,A),derivationallyrelatedform(B,D),derivationallyrelatedform(E,C).
+verbgroup(A,B):- hypernym(A,C),memberofdomainusage(D,B),alsosee(E,C).
+verbgroup(A,B):- synsetdomaintopicof(E,C),synsetdomaintopicof(B,D),derivationallyrelatedform(C,A).
+verbgroup(A,B):- synsetdomaintopicof(A,D),synsetdomaintopicof(E,C),derivationallyrelatedform(B,C).
+verbgroup(A,B):- synsetdomaintopicof(E,C),memberofdomainusage(C,B),hypernym(D,A).
+verbgroup(A,B):- hypernym(B,E),alsosee(D,A),synsetdomaintopicof(E,C).
+verbgroup(A,B):- alsosee(C,A),derivationallyrelatedform(B,D),hypernym(E,C).
+verbgroup(A,B):- alsosee(D,A),hypernym(B,E),alsosee(E,C).
+verbgroup(A,B):- hypernym(B,C),alsosee(E,C),alsosee(A,D).
+verbgroup(A,B):- synsetdomaintopicof(A,D),haspart(E,C),derivationallyrelatedform(B,E).
+verbgroup(A,B):- alsosee(C,B),derivationallyrelatedform(A,D),hypernym(E,C).
+verbgroup(A,B):- hypernym(E,C),hypernym(D,A),alsosee(E,B).
+verbgroup(A,B):- hypernym(D,A),alsosee(B,E),hypernym(E,C).
+verbgroup(A,B):- hypernym(D,A),memberofdomainusage(E,C),derivationallyrelatedform(B,C).
+verbgroup(A,B):- hypernym(D,A),alsosee(E,C),hypernym(E,B).
+verbgroup(A,B):- derivationallyrelatedform(A,E),haspart(E,C),alsosee(D,B).
+verbgroup(A,B):- alsosee(D,B),alsosee(E,C),hypernym(A,E).
+verbgroup(A,B):- derivationallyrelatedform(B,C),hypernym(C,D),derivationallyrelatedform(D,A).
+verbgroup(A,B):- derivationallyrelatedform(D,A),derivationallyrelatedform(C,D),hypernym(B,C).
+verbgroup(A,B):- hypernym(C,B),derivationallyrelatedform(C,D),derivationallyrelatedform(D,A).
+verbgroup(A,B):- derivationallyrelatedform(C,B),hypernym(D,C),derivationallyrelatedform(D,A).
+verbgroup(A,B):- alsosee(B,D),hypernym(D,C),hypernym(A,C).
+verbgroup(A,B):- synsetdomaintopicof(B,D),hypernym(A,C),derivationallyrelatedform(C,D).
+verbgroup(A,B):- alsosee(B,D),hypernym(D,B),hypernym(A,C).
+verbgroup(A,B):- hypernym(D,B),derivationallyrelatedform(C,D),derivationallyrelatedform(A,C).
+verbgroup(A,B):- similarto(E,A),hypernym(A,C),derivationallyrelatedform(B,D).
+verbgroup(A,B):- derivationallyrelatedform(B,D),hypernym(D,C),derivationallyrelatedform(A,C).
+verbgroup(A,B):- hypernym(C,D),derivationallyrelatedform(B,D),derivationallyrelatedform(A,C).
+verbgroup(A,B):- derivationallyrelatedform(D,C),derivationallyrelatedform(B,D),hypernym(C,A).
+verbgroup(A,B):- hypernym(B,C),derivationallyrelatedform(C,D),synsetdomaintopicof(A,D).
+verbgroup(A,B):- hypernym(A,D),hypernym(C,D),hypernym(B,C).
+verbgroup(A,B):- hypernym(B,C),alsosee(C,D),hypernym(A,D).
+verbgroup(A,B):- derivationallyrelatedform(D,B),hypernym(A,C),derivationallyrelatedform(C,D).
+verbgroup(A,B):- hypernym(C,A),derivationallyrelatedform(D,C),derivationallyrelatedform(D,B).
+% accuracy: 76.82926829268293
+% learning time: 1200
+% combine time: 11.826533582999986

@@ -1,0 +1,6 @@
+great(A,B):- alk_groups(A,C),ring_substitutions(B,C).
+great(A,B):- ring_substitutions(A,D),ring_substitutions(B,C),gt(C,D).
+great(A,B):- ring_substitutions(B,D),alk_groups(A,C),gt(D,C).
+% accuracy: 66.16541353383458
+% learning time: 1200
+% combine time: 0.21475504199999884
